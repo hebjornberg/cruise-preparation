@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Cruise Details</h1>
+<p>Name: {{ cruise.name }}</p>
+<p>Start Date: {{ cruise.start_date }}</p>
+<p>End Date: {{ cruise.end_date }}</p>
+
+<h2>Packing Items</h2>
+<ul>
+{% for item in items %}
+    <li>{{ item.name }} (Quantity: {{ item.quantity }})</li>
+{% empty %}
+    <li>No items added yet.</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'add_item' cruise.id %}">Add Item</a>
+{% endblock %}

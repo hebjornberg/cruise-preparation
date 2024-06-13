@@ -4,6 +4,9 @@ from .models import Cruise
 from .forms import CruiseForm, ItemForm
 
 # Create your views here.
+def home(request):
+    return render(request, 'home.html')
+
 def create_cruise(request):
     if request.method == 'POST':
         form = CruiseForm(request.POST)
@@ -11,7 +14,7 @@ def create_cruise(request):
             form.save()
     else: 
         form = CruiseForm()
-    return render(request, 'create_cruise.html', {'form': form})
+    return render(request, 'cruise/create_cruise.html', {'form': form})
 
 def add_item(request, cruise_id):
     cruise = get_object_or_404(Cruise, id=cruise_id)

@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+header .navbar {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 15px 0;
+}
+
+footer p {
+    margin: 0;
+}

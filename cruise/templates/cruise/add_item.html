@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Add Item to Cruise: {{ cruise.name }}</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Item</button>
+</form>
+<a href="{% url 'cruise_detail' cruise.id %}">Back to Cruise Details</a>
+{% endblock %}
