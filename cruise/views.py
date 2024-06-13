@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .models import Cruise
 from .forms import CruiseForm, ItemForm
@@ -11,10 +11,15 @@ def create_cruise(request):
     if request.method == 'POST':
         form = CruiseForm(request.POST)
         if form.is_valid():
-            form.save()
+            cruise = form.save()
+            return redirect('cruise/cruise_detail.html', cruise_id=cruise.id)
     else: 
         form = CruiseForm()
     return render(request, 'cruise/create_cruise.html', {'form': form})
+
+def cruise_detail(request, cruise_id):
+    cruise = get_object_or_404(Cruise, id=cruise_id)
+    return render(request, 'cruise/cruise_detail.html', {'cruise': cruise})
 
 def add_item(request, cruise_id):
     cruise = get_object_or_404(Cruise, id=cruise_id)
@@ -24,7 +29,7 @@ def add_item(request, cruise_id):
             item = form.save(commit=False)
             item.cruise = cruise
             item.save()
-#           return
+            return redirect('cruise/cruise_detail.html', cruise_id=cruise.id)
     else: 
         form = ItemForm()
     return render(request, 'cruise/add_item.html', {'cruise': cruise})
