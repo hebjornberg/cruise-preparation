@@ -9,4 +9,4 @@ class CruiseForm(forms.ModelForm):
 class ItemForm(forms.ModelForm):
     class Meta: 
         model = Item
-        fields = ['name', 'quantity', 'description', 'cruise']
+        fields = ['name', 'quantity', 'description']
