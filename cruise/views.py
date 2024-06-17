@@ -34,3 +34,7 @@ def add_item(request, cruise_id):
     else: 
         form = ItemForm()
     return render(request, 'cruise/add_item.html', {'cruise': cruise, 'form': form})
+
+def cruise_list(request):
+    cruises = Cruise.objects.all()
+    return render(request, 'cruise/cruise_list.html', {'cruises': cruises})

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Cruise List - My Website{% endblock %}
+
+{% block content %}
+    <h1>Cruise List</h1>
+    <ul>
+        {% for cruise in cruises %}
+            <li>
+                <a href="{% url 'cruise_detail' cruise_id=cruise.id %}">{{ cruise }}</a>
+                <ul>
+                    {% for item in cruise.packing_items.all %}
+                        <li>{{ item.name }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
