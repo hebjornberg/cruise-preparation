@@ -1,4 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from .models import Cruise, Item
 from .forms import CruiseForm, ItemForm
@@ -7,11 +10,29 @@ from .forms import CruiseForm, ItemForm
 def home(request):
     return render(request, 'home.html')
 
+def registration_form(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return redirect('home')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/registration_form.html', {'form': form})
+
+
+@login_required
 def create_cruise(request):
     if request.method == 'POST':
         form = CruiseForm(request.POST)
         if form.is_valid():
-            cruise = form.save()
+            cruise = form.save(commit=False)
+            cruise.creator = request.user
+            cruise.save()
             return redirect('cruise_detail', cruise_id=cruise.id)
     else: 
         form = CruiseForm()
@@ -22,6 +43,7 @@ def cruise_detail(request, cruise_id):
     items = cruise.items.all()
     return render(request, 'cruise/cruise_detail.html', {'cruise': cruise, 'items': items})
 
+@login_required
 def add_item(request, cruise_id):
     cruise = get_object_or_404(Cruise, id=cruise_id)
     if request.method == 'POST':
