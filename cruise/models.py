@@ -7,7 +7,7 @@ class Cruise(models.Model):
     end_date = models.DateField()
 
     def __str__(self): 
-        return f"Cruise {self.cruise_number} from {self.start_date} to {self.end_date}"
+        return f"{self.cruise_number} from {self.start_date} to {self.end_date}"
 
 class Item(models.Model): 
     name = models.CharField(max_length=100)
