@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,18 +9,19 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    {% block extra_css %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <header>
+    <div class="d-flex flex-column min-vh-100">
+    <header class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}">Science Cruise Planner</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'home' %}">Home</a>
                         </li>
@@ -47,13 +50,13 @@
         </nav>
     </header>
 
-    <main class="container mt-4">
+    <main class="container mt-4 flex-grow-1">
         {% block content %}
         <!-- Content from child templates will be inserted here -->
         {% endblock %}
     </main>
 
-    <footer class="mt-5 py-3 bg-light">
+    <footer class="mt-5 py-3 bg-light container-fluid">
         <div class="container text-center">
             <p>&copy; {% now "Y" %} Science Cruise Planner</p>
         </div>
@@ -63,5 +66,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JavaScript -->
     {% block extra_js %}{% endblock %}
+</div>
 </body>
 </html>
