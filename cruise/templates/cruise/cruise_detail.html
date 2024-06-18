@@ -7,12 +7,21 @@
 <p>End Date: <b>{{ cruise.end_date }}</b></p>
 <p>Created by: <b>{{ cruise.creator.username }}</b></p>
 
+{% if request.user == cruise.creator %}
+<a href="{% url 'edit_cruise' cruise.id %}">Edit Cruise</a>
+{% endif %}
+
 <h2>Packing Items</h2>
-<ul>
+<ul></ul>
 {% for item in items %}
-    <li><b>{{ item.name }}</b> (Quantity: <b>{{ item.quantity }}</b>)</li>
-{% empty %}
-    <li>No items added yet.</li>
+    <li><b>{{ item.name }}</b> (Quantity: <b>{{ item.quantity }}</b>)
+        {% if item.description %}
+        <p>{{ item.description }}</p>
+        {% endif %}
+        {% if request.user == cruise.creator %}
+        <a href="{% url 'edit_item' cruise.id item.id %}">Edit</a>
+        {% endif %}
+    </li>
 {% endfor %}
 </ul>
 

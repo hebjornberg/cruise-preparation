@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse
 from django.http import HttpResponse
 from .models import Cruise, Item
 from .forms import CruiseForm, ItemForm
@@ -24,16 +25,28 @@ def registration_form(request):
 
 
 @login_required
-def create_cruise(request):
+def create_cruise(request, cruise_id=None):
+    cruise = None
+    if cruise_id:
+        cruise = get_object_or_404(Cruise, id=cruise_id)
+        if request.user != cruise.creator:
+            return HttpResponse("You are not authorized to update this cruise.")
+
     if request.method == 'POST':
-        form = CruiseForm(request.POST)
+        if cruise:
+            form = CruiseForm(request.POST, instance=cruise)
+        else:
+            form = CruiseForm(request.POST)
         if form.is_valid():
             cruise = form.save(commit=False)
             cruise.creator = request.user
             cruise.save()
-            return redirect('cruise_detail', cruise_id=cruise.id)
-    else: 
-        form = CruiseForm()
+            return redirect(reverse('cruise_detail', args=[cruise.id]))
+    else:
+        if cruise:
+            form = CruiseForm(instance=cruise)
+        else:
+            form = CruiseForm()
     return render(request, 'cruise/create_cruise.html', {'form': form})
 
 def cruise_detail(request, cruise_id):
@@ -50,10 +63,25 @@ def add_item(request, cruise_id):
             item = form.save(commit=False)
             item.cruise = cruise
             item.save()
-            return redirect('cruise_detail', cruise_id=cruise.id)
-    else: 
+            return redirect(reverse('cruise_detail', args=[cruise.id]))
+    else:
         form = ItemForm()
     return render(request, 'cruise/add_item.html', {'cruise': cruise, 'form': form})
+
+@login_required
+def edit_item(request, cruise_id, item_id):
+    cruise = get_object_or_404(Cruise, id=cruise_id)
+    item = get_object_or_404(Item, id=item_id, cruise=cruise)
+
+    if request.method == 'POST':
+        form = ItemForm(request.POST, instance=item)
+        if form.is_valid():
+            form.save()
+            return redirect(reverse('cruise_detail', args=[cruise.id]))
+    else:
+        form = ItemForm(instance=item)
+
+    return render(request, 'cruise/edit_item.html', {'form': form, 'cruise': cruise, 'item': item})
 
 def cruise_list(request):
     cruises = Cruise.objects.all()
