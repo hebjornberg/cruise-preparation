@@ -9,7 +9,7 @@ class Cruise(models.Model):
     creator = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self): 
-        return f"{self.cruise_number} from {self.start_date} to {self.end_date}"
+        return f"{self.cruise_number}"
 
 class Item(models.Model): 
     name = models.CharField(max_length=100)

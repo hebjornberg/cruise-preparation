@@ -2,15 +2,15 @@
 
 {% block content %}
 <h1>Cruise Details</h1>
-<p>Name: {{ cruise }}</p>
-<p>Start Date: {{ cruise.start_date }}</p>
-<p>End Date: {{ cruise.end_date }}</p>
-<p>Created by: {{ cruise.creator.username }}
+<p>Cruise:<b>{{ cruise }}</b></p>
+<p>Start Date: <b>{{ cruise.start_date }}</b></p>
+<p>End Date: <b>{{ cruise.end_date }}</b></p>
+<p>Created by: <b>{{ cruise.creator.username }}</b></p>
 
 <h2>Packing Items</h2>
 <ul>
 {% for item in items %}
-    <li>{{ item.name }} (Quantity: {{ item.quantity }})</li>
+    <li><b>{{ item.name }}</b> (Quantity: <b>{{ item.quantity }}</b>)</li>
 {% empty %}
     <li>No items added yet.</li>
 {% endfor %}

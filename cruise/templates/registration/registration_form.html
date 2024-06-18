@@ -4,9 +4,9 @@
 
 {% block content %}
     <h2>Register</h2>
-    <form method="post">
+    <form class="form-with-validation" method="post" action="{% url 'registration_form' %}">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form }}
         <button type="submit">Register</button>
     </form>
     <a href="{% url 'home' %}">Back to home</a>
