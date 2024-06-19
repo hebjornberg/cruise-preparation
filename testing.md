@@ -105,7 +105,10 @@ The user which created a cruise has the authority to edit the cruise information
 - Tests were perfomed by deleting registered user and then trying to log in. 
 - As the user has been deleted, it needed to be reregistered to be log into the application. 
 
-## Validation 
+</details>
+
+
+## Validation
 
 # HTML and CSS
 
@@ -126,6 +129,10 @@ The website was put checked through wave, [Wave](https://wave.webaim.org/), with
 
 ## Responsiveness 
 
+The website is responsive from screen sizes 320px and upwards, tested through Google Chrome developer tools. 
 
+The site has also been tested on multiple devices (smartphone, tablet, laptop) and in multiple browsers (Google Chrome, Safari, Mozilla Firefox).
 
+## Bugs
 
+The developing of this app has gone smoothly, as the functionality is very streamlined for a specific task. At the time of deployment, no bugs were detected. 
