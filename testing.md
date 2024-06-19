@@ -94,3 +94,38 @@ The user which created a cruise has the authority to edit the cruise information
 
 </details>
 
+<details>
+<summary>Admin Rights</summary>
+<br>
+
+<b>Admin Rights</b>
+
+- Testing was made through the Django interface. 
+- As an admin, you have the ability to delete users and cruises with associated objects. 
+- Tests were perfomed by deleting registered user and then trying to log in. 
+- As the user has been deleted, it needed to be reregistered to be log into the application. 
+
+## Validation 
+
+# HTML and CSS
+
+- The HTML and CSS was built using Bootstrap and Django syntax to inherit from a base.html-template. 
+
+The code was run through the [Official W3C validator](https://validator.w3.org/). The errors occurring had nothing to do with the actual HTML-code, but with the syntax related to Django, and can therefore not be considered an error. 
+
+# Python 
+
+All code was run through the Code Institutes [Python Linter](https://pep8ci.herokuapp.com/#). 
+The errors occurring was not related to functionality of the program. 
+
+# Wave 
+
+The website was put checked through wave, [Wave](https://wave.webaim.org/), with no errors occurring. 
+
+![Wave Analysis](assets/images/wave.png)
+
+## Responsiveness 
+
+
+
+
