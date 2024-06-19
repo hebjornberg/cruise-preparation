@@ -1,6 +1,6 @@
 # Science Cruise Planner 
 
-The application Science Cruise Planner is developed to facilitate the preperations for scientific cruises conduct with research vessels, in the terms of packing. When planning for a scientific cruise, the packing itinerary is crucial to ensure that sampling can go ahead as planned. 
+The application Science Cruise Planner is developed to facilitate the preperations for scientific cruises conducted with research vessels, in the terms of packing. When planning for a scientific cruise, the packing itinerary is crucial to ensure that sampling can go ahead as planned. 
 
 [Live Site](https://cruise-preparation-92c5a099dd05.herokuapp.com/)
 
@@ -22,6 +22,7 @@ The application Science Cruise Planner is developed to facilitate the preperatio
   - [Manual Testing](#manual-testing)
   - [Validation](#validation)
 - [Deployment](#deployment)
+- [Technologies](#technologies)
 - [Planning](#planning)
   - [Database schema and flowchart](#database-schema-and-flowchart)
 - [Security](#security)
@@ -161,6 +162,8 @@ Testing and validation: [Testing and validation](testing.md)
 # Deployment 
 
 ### The website has been deployed to Heroku. 
+
+# Technologies
 
 # Planning 
 
