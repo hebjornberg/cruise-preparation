@@ -1,6 +1,27 @@
 ## Manual Testing of Application 
 
 <details>
+<summary>Navigation</summary>
+<br>
+
+<b>Navigation Bar</b>
+
+Navigation was tested by clicking the links in the navigation bar, making sure it redirects you to the correct page. 
+
+- Home - home.html
+- Login - login.html
+- Register - registration_form.html
+
+![Navigataion bar before signing in](assets/images/nav_bar_signed_out.gif)
+
+- View Cruises - cruise_list.html
+- Create Cruise - create_cruise.html
+
+![Navigataion bar when logged in](assets/images/nav_bar_logged_in.gif)
+
+</details>
+
+<details>
 <summary>Register and Login</summary>
 <br>
 
@@ -35,9 +56,41 @@ Once you have created a user, you can create a cruise. The autherization system 
 
 <b>Add Item</b>
 
+- Add Item - add_item.html
+- Edit Item - edit_item.html
+
 Once the cruise is created, you can start adding items to the packing items. You insert the name of the item, the quantity which you wish to bring, and an optional description. Any user that is logged in can add items to any cruise. But only the creator of a cruise can edit the items. This to keep traceability for changes in the planning stages of the cruise. 
 
 ![Add and Edit Item](assets/images/add_item.gif)
+
+</details>
+
+<details>
+<summary>View Cruises</summary>
+<br>
+
+<b>View Cruises</b>
+
+- Cruise List - cruise_list.html
+- Cruise Details - cruise_details.html
+
+When clicking the View Cruises links, a list of created cruises appears. You can click on the individual cruises to view the Cruise Details of a specific cruise. 
+
+![View Cruises](assets/images/view_cruises.gif)
+
+</details>
+
+<details>
+<summary>Edit Cruise</summary>
+<br>
+
+<b>Edit Cruise</b>
+
+- Edit Cruise - create_cruise.html
+
+The user which created a cruise has the authority to edit the cruise information. 
+
+![Edit Cruise](assets/images/edit_cruise.gif)
 
 </details>
 
