@@ -7,13 +7,26 @@ The application Science Cruise Planner is developed to facilitate the preperatio
 ![Device Mockup](assets/images/still/all-devices-black.png)
 
 # Content 
--
--
--
--
--
--
--
+- [Project Goals](#project-goals)
+  - [User Goals](#user-goals)
+  - [Admin Goals](#admin-goals)
+  - [User Stories](#user-stories)
+- [Features](#features)
+  - [Navigation Bar](#navigation-bar)
+  - [Register Page](#register-page)
+  - [Login Page](#login-page)
+  - [Create Cruise](#create-cruise)
+  - [Cruise Details](#cruise-details)
+  - [Add Item](#add-item)
+- [Testing](#testing)
+  - [Manual Testing](#manual-testing)
+  - [Validation](#validation)
+- [Deployment](#deployment)
+- [Planning](#planning)
+  - [Database schema and flowchart](#database-schema-and-flowchart)
+- [Security](#security)
+- [Further Development](#further-development)
+- [Credits](#credits)
 
 # Project Goals 
 
@@ -26,6 +39,8 @@ The application Science Cruise Planner is developed to facilitate the preperatio
 
 ### Admin Goals 
 - Admin Permissions 
+
+## User Stories
 
 ### User Stories implemented 
 
@@ -129,11 +144,33 @@ In the Add Items view, it is possible to state:
 
 ![Add Item](assets/images/still/add-item.png)
 
-# Testing 
+# Testing
 
-### Manual Testing 
+## Manual Testing 
 
-The website has undergone manual testing and validation. This has been documented in a separate testing file. 
+The website has undergone manual testing. This has been documented in a separate testing file. 
 
 Testing and validation: [Testing and validation](testing.md)
+
+## Validation
+
+Validation of code can be found in the testing-documentation. 
+
+Testing and validation: [Testing and validation](testing.md)
+
+# Deployment 
+
+### The website has been deployed to Heroku. 
+
+# Planning 
+
+## Database schema and Flowchart 
+
+# Security 
+
+# Further Development
+
+# Credits
+
+
 
