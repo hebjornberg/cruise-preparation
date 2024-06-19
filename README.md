@@ -4,11 +4,18 @@ The application Science Cruise Planner is developed to facilitate the preperatio
 
 [Live Site](https://cruise-preparation-92c5a099dd05.herokuapp.com/)
 
-![Device Mockup](assets/images/all-devices-black.png)
+![Device Mockup](assets/images/still/all-devices-black.png)
 
 # Content 
+-
+-
+-
+-
+-
+-
+-
 
-## Project Goals 
+# Project Goals 
 
 ### User Goals 
 - Create a new cruise
@@ -42,4 +49,91 @@ The application Science Cruise Planner is developed to facilitate the preperatio
 - Marking an item as packed updates its status in the database
 - When viewing the cruise details, the items status is reflected in the pack list
 
+[Link to user stories](https://github.com/users/hebjornberg/projects/2/views/1)
+
+![Agile planning](assets/images/still/agile.png)
+
+# Features
+
+## Navigation Bar 
+
+### The navigation bar of the website is responsive and contain the following links: 
+
+- Home page
+- Login page
+- Register page
+- View Cruises page
+- Create Cruise page
+
+The navigation bar will contain different buttons depending on if the site user is logged in or not. 
+
+<b>Before logging in:</b>
+
+![Navigation bar before logging in](assets/images/still/navbar-login.png)
+
+<b>When logged in as a user:</b>
+
+![Navigation bar when logged in as a user](assets/images/still/navbar-user.png)
+
+The Science Cruise Planner logo also directs back to the Home page of the website. 
+
+## Register Page 
+
+### For a user to be able to create and plan a cruise, they will have to register as a user to the site. 
+
+![Register Page](assets/images/still/register.png)
+
+## Login Page 
+
+### Before being able to create and plan a cruise, the user needs to login to the website. This in order to keep traceability of who created which cruise. 
+
+![Login Page](assets/images/still/login.png)
+
+## Create Cruise 
+
+### The user is able to create cruises with: 
+
+- Cruise Name
+- Start date
+- End date
+
+![Create Cruise](assets/images/still/create-cruise.png)
+
+
+![Create New Cruise](assets/images/still/create-new-cruise.png)
+
+
+## Cruise Details 
+
+### Once a cruise is created, it will be directed to the Cruise Details section of the page. This will display: 
+
+- Name of cruise
+- Start date
+- End date 
+- Created by
+- Packing Items 
+
+In this view, it is also possible to start adding items to the packing list. 
+
+![Cruise Details](assets/images/still/cruise-details.png)
+
+## Add Item 
+
+### Once a cruise is created, it is possible to start adding items to the packing list. The user that created the cruise additionally can edit the items added to the cruise. 
+
+In the Add Items view, it is possible to state: 
+
+- Name of item
+- Quantity 
+- Description 
+
+![Add Item](assets/images/still/add-item.png)
+
+# Testing 
+
+### Manual Testing 
+
+The website has undergone manual testing and validation. This has been documented in a separate testing file. 
+
+Testing and validation: [Testing and validation](testing.md)
 

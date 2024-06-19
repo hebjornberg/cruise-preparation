@@ -12,12 +12,12 @@ Navigation was tested by clicking the links in the navigation bar, making sure i
 - Login - login.html
 - Register - registration_form.html
 
-![Navigataion bar before signing in](assets/images/nav_bar_signed_out.gif)
+![Navigataion bar before signing in](assets/images/testing/nav_bar_signed_out.gif)
 
 - View Cruises - cruise_list.html
 - Create Cruise - create_cruise.html
 
-![Navigataion bar when logged in](assets/images/nav_bar_logged_in.gif)
+![Navigataion bar when logged in](assets/images/testing/nav_bar_logged_in.gif)
 
 </details>
 
@@ -34,7 +34,7 @@ The registration and autherization of users is handled by the Django authenticat
 - Register - registration_form.html
 - Login - login.html
 
-![Register and Login](assets/images/register_and_login.gif)
+![Register and Login](assets/images/testing/register_and_login.gif)
 
 </details>
 
@@ -46,7 +46,7 @@ The registration and autherization of users is handled by the Django authenticat
 
 Once you have created a user, you can create a cruise. The autherization system is put in place to track who has created the cruise in question. When clicking the "Create Cruise"-button, you will either get directed to the create_cruise.html to create a cruise, or you will be asked to login, in case you haven't done this already. 
 
-![Create Cruise](assets/images/create_cruise.gif)
+![Create Cruise](assets/images/testing/create_cruise.gif)
 
 </details>
 
@@ -59,9 +59,9 @@ Once you have created a user, you can create a cruise. The autherization system 
 - Add Item - add_item.html
 - Edit Item - edit_item.html
 
-Once the cruise is created, you can start adding items to the packing items. You insert the name of the item, the quantity which you wish to bring, and an optional description. Any user that is logged in can add items to any cruise. But only the creator of a cruise can edit the items. This to keep traceability for changes in the planning stages of the cruise. 
+Once the cruise is created, you can start adding items to the packing items. You insert the name of the item, the quantity which you wish to bring, and an optional description. Any user that is logged in can add items to any cruise. But only the creator of a cruise can edit the items. This to keep traceability for changes in the planning stages of a cruise. 
 
-![Add and Edit Item](assets/images/add_item.gif)
+![Add and Edit Item](assets/images/testing/add_item.gif)
 
 </details>
 
@@ -76,7 +76,7 @@ Once the cruise is created, you can start adding items to the packing items. You
 
 When clicking the View Cruises links, a list of created cruises appears. You can click on the individual cruises to view the Cruise Details of a specific cruise. 
 
-![View Cruises](assets/images/view_cruises.gif)
+![View Cruises](assets/images/testing/view_cruises.gif)
 
 </details>
 
@@ -90,7 +90,7 @@ When clicking the View Cruises links, a list of created cruises appears. You can
 
 The user which created a cruise has the authority to edit the cruise information. 
 
-![Edit Cruise](assets/images/edit_cruise.gif)
+![Edit Cruise](assets/images/testing/edit_cruise.gif)
 
 </details>
 
@@ -125,7 +125,7 @@ The errors occurring was not related to functionality of the program.
 
 The website was put checked through wave, [Wave](https://wave.webaim.org/), with no errors occurring. 
 
-![Wave Analysis](assets/images/wave.png)
+![Wave Analysis](assets/images/testing/wave.png)
 
 ## Responsiveness 
 
