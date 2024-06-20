@@ -289,7 +289,7 @@ Features that would be desirable for further development would be:
 - The ability to mark an item as packed, which would update its status in the database and also would be visible through the interface
 - Function to see which user is currently logged in
 
-# Credits
+# Acknowledgement 
 
 - Walkthrough "I Think Therefore I Blog" created by the Code Institute has been a crucial pillar in understanding the construction of a website with PostgreSQL and Django. 
 - A special thanks to the tutoring support from the tutors at Code Institute when running into issues with the code. 
