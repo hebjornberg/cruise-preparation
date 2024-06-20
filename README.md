@@ -21,6 +21,7 @@ The application Science Cruise Planner is developed to facilitate the preperatio
 - [Testing](#testing)
   - [Manual Testing](#manual-testing)
   - [Validation](#validation)
+- [Run Locally](#run-locally)
 - [Deployment](#deployment)
 - [Technologies](#technologies)
 - [Planning](#planning)
@@ -158,6 +159,47 @@ Testing and validation: [Testing and validation](testing.md)
 Validation of code can be found in the testing-documentation. 
 
 Testing and validation: [Testing and validation](testing.md)
+
+# Run Locally 
+
+To run this project locally, use the following steps: 
+
+1. Clone the repository 
+
+```bash
+  git clone https://github.com/hebjornberg/cruise-preparation.git
+```
+ 
+2. Go to project directory 
+
+```bash
+  cd cruise-preparation
+```
+
+3. Install required dependencies 
+
+```bash
+  pip install -r requirements.txt
+```
+
+4. Set up environment variables. Create a env.py file in the root directory and add: 
+
+DATABASE_URL=[your_database_url]
+
+5. Apply migrations
+
+```bash
+  python manage.py migrate 
+```
+
+6. Run the server 
+
+```bash
+  python manage.py runserver
+```
+
+To run this application locally, it is necessary to set up a PostgreSQL to use as your database. 
+Don't commit your env.py file to not share sensitive information regarding your database. 
 
 # Deployment 
 
