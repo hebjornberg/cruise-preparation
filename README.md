@@ -1,6 +1,6 @@
 # Science Cruise Planner 
 
-The application Science Cruise Planner is developed to facilitate the preperations for scientific cruises conducted with research vessels, in the terms of packing. When planning for a scientific cruise, the packing itinerary is crucial to ensure that sampling can go ahead as planned. 
+The application Science Cruise Planner is developed to facilitate the preparations for scientific cruises conducted with research vessels, in the terms of packing. When planning for a scientific cruise, the packing itinerary is crucial to ensure that sampling can go ahead as planned. 
 
 [Live Site](https://cruise-preparation-92c5a099dd05.herokuapp.com/)
 
@@ -60,7 +60,7 @@ The application Science Cruise Planner is developed to facilitate the preperatio
 - I can delete a cruise from the system along with associated data
 - I can access, create, manage and delete users from the system
 
-### User Stories for further develoment 
+### User Stories for further development 
 
 - There is a checkbox next to the item which can be checked to mark it as packed
 - Marking an item as packed updates its status in the database
@@ -267,13 +267,13 @@ Steps to deploy to Heroku:
 # Security 
 
 <b>Django Allauth:</b>
-  - Handles authenthication and authorization 
-  - Handles registration, login, password management, social authenthication. 
+  - Handles authentication and authorization 
+  - Handles registration, login, password management, social authentication. 
   - Ensures secure accounts processes 
 
-<b>CRSF Protection:</b>
+<b>CSRF Protection:</b>
   - Prevents unauthorized actions from malicious websites
-  - Django's built-in feature includes CRSF tokens with forms
+  - Django's built-in feature includes CSRF tokens with forms
   - Server-side verification tokens 
 
 <b>Authenticated User Restrictions:</b>
@@ -292,7 +292,7 @@ Features that would be desirable for further development would be:
 # Credits
 
 - Walkthrough "I Think Therefore I Blog" created by the Code Institute has been a crucial pillar in understanding the construction of a website with PostgreSQL and Django. 
-- A speical thanks to the tutoring support from the tutors at Code Institute when running into issues with the code. 
+- A special thanks to the tutoring support from the tutors at Code Institute when running into issues with the code. 
 - A thank you to my mentor Sheryl Goldberg that helped me come up with the concept of the application 
 - #community-sweden on Slack that always has a supportive word to give when you feel like you aren't getting anywhere 
 
