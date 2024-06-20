@@ -24,7 +24,7 @@ The application Science Cruise Planner is developed to facilitate the preperatio
 - [Deployment](#deployment)
 - [Technologies](#technologies)
 - [Planning](#planning)
-  - [Database schema and flowchart](#database-schema-and-flowchart)
+  - [Database schema](#database-schema)
 - [Security](#security)
 - [Further Development](#further-development)
 - [Credits](#credits)
@@ -163,17 +163,97 @@ Testing and validation: [Testing and validation](testing.md)
 
 ### The website has been deployed to Heroku. 
 
+Steps to deploy to Heroku: 
+
+1. Create a Heroku account
+  - Go to [Heroku](https://www.heroku.com) and create an account
+2. Create a new app 
+  - Click "New" in the top right corner
+  - Enter a unique app name
+  - Choose your region 
+  - Click "Create app" 
+3. Add Configure Environment Variables 
+  - DATABASE_URL: [This will be the url of your set up database]
+  - DISABLE_COLLECTSTATIC: [1]
+  - SECRET_KEY: [Your secret key]
+4. Deploy the application 
+  - Go to the "Deploy" tab 
+  - Under "Deployment method", choose GitHub
+  - Connect to your GitHub-account if prompted 
+  - Connect your repository and click "Connect" 
+  - Scroll to "Manual Deploy" 
+  - Choose the main branch 
+  - Click "Deploy Branch" 
+5. Verify deployment 
+  - Wait for the building process to complete
+  - Click "View" to view the deployed application 
+
 # Technologies
+
+<b>- HTML</b>
+   - The website was structurd using HTML with template-inheritance. 
+
+<b>- Bootstrap:</b>
+    - The website styled using the Bootstrap CSS framework. 
+
+<b>- Python:</b>
+    - The backend was built with Python using the Django framework. 
+
+<b>- GitHub:</b>
+    - The source code is hosted on GitHub, along with the planning of the application. 
+
+<b>- Git:</b>
+    - Throughout the creation of the website, the code was committed and pushed using Git. 
+
+<b>Python Modules:</b>
+
+- asgiref==3.8.1
+- dj-database-url==0.5.0
+- Django==4.2.13
+- gunicorn==20.1.0
+- psycopg2==2.9.9
+- sqlparse==0.5.0
 
 # Planning 
 
-## Database schema and Flowchart 
+## Database schema
+
+![Database Schema](assets/images/still/database-schema.png)
+
+[PostgreSQL](https://dbs.ci-dbs.net/): Database management system provided by the Code Institute
 
 # Security 
 
+<b>Django Allauth:</b>
+  - Handles authenthication and authorization 
+  - Handles registration, login, password management, social authenthication. 
+  - Ensures secure accounts processes 
+
+<b>CRSF Protection:</b>
+  - Prevents unauthorized actions from malicious websites
+  - Django's built-in feature includes CRSF tokens with forms
+  - Server-side verification tokens 
+
+<b>Authenticated User Restrictions:</b>
+  - Only registered users are able to create objects (cruises, packing items)
+  - Helps with traceability in the planning process
+
 # Further Development
 
+During the development of this website, the aim was to reach the MVP, Minimal Viable Product, with the ability to create users, cruises and add packing items to the created cruises. 
+
+Features that would be desirable for further development would be: 
+
+- The ability to mark an item as packed, which would update its status in the database and also would be visible through the interface
+- Function to see which user is currently logged in
+
 # Credits
+
+- Walkthrough "I Think Therefore I Blog" created by the Code Institute has been a crucial pillar in understanding the construction of a website with PostgreSQL and Django. 
+- A speical thanks to the tutoring support from the tutors at Code Institute when running into issues with the code. 
+- A thank you to my mentor Sheryl Goldberg that helped me come up with the concept of the application 
+- #community-sweden on Slack that always has a supportive word to give when you feel like you aren't getting anywhere 
+
 
 
 
