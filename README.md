@@ -191,10 +191,10 @@ Steps to deploy to Heroku:
 # Technologies
 
 <b>- HTML</b>
-   - The website was structurd using HTML with template-inheritance. 
+   - The website was structured using HTML with template-inheritance. 
 
 <b>- Bootstrap:</b>
-    - The website styled using the Bootstrap CSS framework. 
+    - The website was styled using the Bootstrap CSS framework. 
 
 <b>- Python:</b>
     - The backend was built with Python using the Django framework. 
