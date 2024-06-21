@@ -46,31 +46,23 @@ The application Science Cruise Planner is developed to facilitate the preparatio
 
 ### User Stories implemented 
 
-- There is a form of interface to enter cruise name/number, start date and end date
-- When data is entered, a new cruise is created
-- It is possible to start adding packing itinerary
-- There is a page view that displays cruise name, start date and end date
-- The cruise is accessible through a unique URL or identifier
-- There is an interface where items can be added to a specific cruise
-- I can add new items to the packing list, specifying item name and quantity
-- I can edit items from the packing list
-- There is a user registration and login system
-- Only users can create and modify cruises and packing lists
-- I can access all cruises and items created
-- I can delete a cruise from the system along with associated data
-- I can access, create, manage and delete users from the system
+- As a site user, I can create a new cruise to be able to start planning for it
+- As a site user, I can view the details of a specific cruise, such as start and end date to be able plan accordingly
+- As a site user, I can create, add, edit and delete items intended for packing to be able keep track of what needs to be prepared for the cruise
+- As a site user, I can create an account to be able to add cruises and items for the preparations
+- As a site admin, I can administer cruises and site users to be able to ensure the integrity of cruise preparations
 
 ### User Stories for further development 
 
-- There is a checkbox next to the item which can be checked to mark it as packed
-- Marking an item as packed updates its status in the database
-- When viewing the cruise details, the items status is reflected in the pack list
+- As a site user, I can mark items listed as packed to be able keep track of what has been packed
 
 [Link to user stories](https://github.com/users/hebjornberg/projects/2/views/1)
 
 ![Agile planning](assets/images/still/agile.png)
 
 # Features
+
+The design of the application is a basic, utilitarian design as the users for this application need something straightforward and clear, as well as the function of the actual website is the main focus. 
 
 ## Navigation Bar 
 
